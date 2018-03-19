@@ -54,7 +54,8 @@ g1 <- ggplot(data=newdat,
        aes(long, lat))+
   geom_polygon(aes(group=group, fill=count),color="black")+
   theme_bw()+
-  theme(panel.background = element_rect(fill="darkgray"))+
+  theme(panel.background = element_rect(fill="darkgray"),
+        legend.key = element_rect(fill="darkgray"))+
   scale_fill_manual(breaks=uniquecounts,
                     values=uniquecolors)
 
